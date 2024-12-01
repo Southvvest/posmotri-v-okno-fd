@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -35,4 +36,127 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  margin: auto;
+  padding: 133px 30px;
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  /* display: inline;
+  bottom: 0; */
+  /* width: 100%; */
+}
+
+.result {
+  max-width: 711px;
+  max-height: 534;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  /* padding-top: 78px; */
+  gap: 16px;
+  top: 0;
+}
+
+.result__video-container {
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px 212px 194px;
+  align-items: end;
+  gap: 40px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.content__list {
+  max-height: 298px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.button {
+  border: 1px solid #fff;
+  background-color: inherit;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  width: 100%;
+  height: 34px;
+  padding: 0;
+}
+
+.search-form__submit-button {
+  /* align-self: end; */
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* .search-form__label-text {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+.title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  text-transform: uppercase;
+  line-height: 70.5px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__video-card {
+  display: flex;
+}
+
+.content__video-card-description-container {
+  width: 200px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+font-family: 'Oswald' sans-serif;
+font-size: 30px;
+font-weight: 700;
+line-height: 30px;
+text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
 }
