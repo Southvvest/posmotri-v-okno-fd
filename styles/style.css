@@ -48,6 +48,9 @@ ol {
   width: 100%;
 }
 
+
+/* Далее идут стили для вывода результата запроса видео */
+
 .result {
   max-width: 711px;
   max-height: 534px;
@@ -72,31 +75,10 @@ ol {
   object-position: center;
 }
 
-.search-form {
-  display: grid;
-  grid-template-columns: 225px 212px 194px;
-  align-items: end;
-  gap: 40px;
-}
+/* Конец стилей вывода результата запроса видео */
 
-.content__details {
-  display: flex;
-  flex-direction: column;
-  gap: 26px;
-}
 
-.content__list {
-  max-height: 298px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-  scrollbar-width: none;
-  padding: 2px;
-}
-
+/* Общий стиль для кнопок на странице */
 .button {
   border: 1px solid #fff;
   background-color: inherit;
@@ -108,6 +90,30 @@ ol {
   height: 34px;
   padding: 0;
   cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.preloader-template {
+  position: absolute;
+}
+
+
+/* Далее идут стили для формы поиска */
+
+.search-form {
+  display: grid;
+  grid-template-columns: 225px 212px 194px;
+  align-items: end;
+  gap: 40px;
 }
 
 .search-form__fieldset-title {
@@ -123,73 +129,9 @@ ol {
   width: fit-content;
 }
 
-
 .search-form__label-text {
   text-indent: 5px;
   align-self: end;
-}
-
-.title{
-  font-family: 'Oswald', sans-serif;
-  font-size: 75px;
-  text-transform: uppercase;
-  line-height: 70.5px;
-}
-
-.content__accent {
-  color: #545050;
-  
-}
-
-.content__video-card {
-  display: flex;
-}
-
-.content__list-item {
-  max-height: 107px;
-}
-
-.content__video-card-description-container {
-  width: 200px;
-  height: 107px;
-}
-
-.content__video-card-thumbnail {
-  width: 194px;
-  max-height: 103px;
-  align-self: center;
-}
-
-.content__card-link {
-  display: block;
-  text-decoration: none;
-  color: #fff;
-}
-
-.content__video-card-title {
-font-family: 'Oswald', sans-serif;
-font-size: 30px;
-font-weight: 700;
-line-height: 30px;
-text-transform: uppercase;
-}
-
-.content__video-card-description {
-  line-height: 16.2px;
-}
-
-.preloader-template {
-  position: absolute;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 
 .search-form__checkbox-list {
@@ -217,10 +159,6 @@ text-transform: uppercase;
   color: #fff;
 }
 
-.search-form__label:focus {
-  outline: none;
-}
-
 .search-form__label:has(.search-form__textfield) {
   width: 100%;
 }
@@ -229,18 +167,99 @@ text-transform: uppercase;
   max-height: 19px;
 }
 
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-  color: #fff;
-}
-
 .search-form__pseudo-checkbox {
   align-self: center;
   width: 19px;
   height: 19px;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+/* Конец стилей для формы поиска */
+
+
+/* Далее идут стили для блока со списком */
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.content__list {
+  max-height: 298px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  scrollbar-width: none;
+  padding: 2px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card {
+  display: flex;
+}
+
+.content__list-item {
+  max-height: 107px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 75px;
+  text-transform: uppercase;
+  line-height: 70.5px;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+}
+
+.content__video-card-description-container {
+  width: 200px;
+  height: 107px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  max-height: 103px;
+  align-self: center;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+/* Конец стилей блока со списком */
+
+
+/* Далее идут стили для различных состояний элементов */
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+  color: #fff;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox {
@@ -276,6 +295,7 @@ text-transform: uppercase;
 
 .content__list-item:hover {
   text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .content__card-link:focus {
@@ -291,3 +311,5 @@ text-transform: uppercase;
 .content__card-link_current:active {
   background-color: rgba(84, 80, 80, 1);
 }
+
+/* Конец стилей состояний элементов */
