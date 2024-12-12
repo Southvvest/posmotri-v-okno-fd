@@ -14,5 +14,5 @@ _____
 Это проектная работа второго спринта курса 
 Yandex Practicum Фронтенд-разработчик.
 
-https://github.com/Southvvest/posmotri_v_okno
+https://github.com/Southvvest/posmotri_v_okno-fd
 
