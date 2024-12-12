@@ -92,7 +92,7 @@ ol {
 }
 
 .visually-hidden {
-  position: absolute;
+  /* position: absolute; */
   inline-size: 1px;
   block-size: 1px;
   overflow: hidden;
@@ -101,9 +101,9 @@ ol {
   white-space: nowrap;
 }
 
-.preloader-template {
+/* .preloader-template {
   position: absolute;
-}
+} */
 
 
 /* Далее идут стили для формы поиска */
